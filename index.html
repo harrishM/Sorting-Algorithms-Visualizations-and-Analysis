@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>DA Assignment 1</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="sort.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="left-side">
+        <div class="box">
+            <label>List Size</label>
+            <input type="number" min="1" id="list_size" placeholder=" Eg: 50">
+            <button class="primaryBtn" onclick="initList()">Initialise List</button>
+        </div>
+
+        <br><br>
+        
+    <div class="box"><p class="truncate">Unsorted Array : <label id="unsortedArray"></label></p></div>
+
+
+    <br><br>
+        <div class="box">
+            <button class="primaryBtn" onclick="insertionSort()">Sort By Insertion Sort</button>
+            <p class="truncate">Sorted Array : <label id="insertionSort"></label><br><br> Time Taken (ms) : <label id="is_time_taken"></label></p>
+        </div>
+
+        <br><br>
+        <div class="box">
+            <button class="primaryBtn" onclick="initMergeSort()">Sort By Merge Sort</button>
+            <p class="truncate">Sorted Array : <label id="mergeSort"></label><br><br> Time taken (ms) : <label id="ms_time_taken"></label></p>
+        </div>
+		
+		 <br><br>
+        <div class="box">
+            <button class="primaryBtn" onclick="bubbleSort()">Sort By Bubble Sort</button>
+            <p class="truncate">Sorted Array : <label id="bubblesort"></label><br><br> Time taken (ms) : <label id="bs_time_taken"></label></p>
+        </div>
+		
+		<br><br>
+        <div class="box">
+            <button class="primaryBtn" onclick="heapSort()">Sort By Heap Sort</button>
+            <p class="truncate">Sorted Array : <label id="heapsort"></label><br><br> Time taken (ms) : <label id="hs_time_taken"></label></p>
+        </div>
+		
+		<br><br>
+        <div class="box">
+            <button class="primaryBtn" onclick="quickSort()">Sort By Quick Sort</button>
+            <p class="truncate">Sorted Array : <label id="quicksort"></label><br><br> Time taken (ms) : <label id="qs_time_taken"></label></p>
+        </div>
+		<br><br><br>
+
+
+	  
+    </div>
+
+
+    <div class="right-side">
+        <div id="dataEntry"></div>
+		      <br><br>
+        <button class="bigBtn primaryBtn" onclick="window.location.reload()">Reset</button>
+        <button class="bigBtn primaryBtn" onclick="saveEntry()">Save</button>
+		<button class="bigBtn primaryBtn" onclick="runAll()">run All</button>
+
+        <br><br>
+        <div>
+            <button id="analyse" onclick="chartData()" class="primaryBtn">Analyse</button>
+        </div>
+		<br><br><br><br>
+
+<div id="graphContainer" class="container">
+        <div class="graphBox">
+                <div id="curve_chart" style="height: 500px"></div>
+        </div>
+</div>
+        
+    </div>
+</div>
+
+
+
+</body>
+
+
+
+</html>
